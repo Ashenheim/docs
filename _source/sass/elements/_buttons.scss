@@ -1,0 +1,54 @@
+/* ====================================
+	Button styles
+==================================== */
+
+.btn-container {
+    perspective: 1700px;
+    perspective-origin: 50% 0%;
+    margin-bottom: 1.4em;
+}
+
+.btn {
+    display: inline-block;
+    background: $c-main;
+    font-size: 30px;
+    color: $white;
+    box-shadow: 0 1px 3px rgba( $black, .3 );
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    overflow: hidden;
+    padding: 12px 30px;
+    @include transition;
+
+    &.btn-js { padding: 0; }
+
+    &.btn-js span {
+        padding: 12px 30px;
+        display: inline-block;
+        transform-origin: 100% 100%;
+        @include transition(all 300ms);
+
+        + span {
+            @include position( absolute, 100% null null 0 );
+            transform: translateY(0) rotateX(90deg);
+            background: rgba( black, .2 );
+        }
+    }
+
+    &:hover {
+
+        // color: $c-main;
+        // background: $white;
+        color: $white;
+
+        &.btn-js span {
+            transform: translateY(-100%) rotateX(-90deg);
+            // opacity: 0;
+            + span {
+                transform: translateY(-100%) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+    }
+}

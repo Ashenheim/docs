@@ -1,0 +1,29 @@
+# CONFIG for Jekyll
+
+# Permalinks
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:            Proto
+tagline:
+url:
+baseurl:          "/docs"
+author:
+- name:           Patrick Gurr
+- url:            https://twitter.com/ashenheim
+- email:          patrick@gmail.com
+
+
+# Build
+markdown: redcarpet
+highlighter: rouge
+exclude: [
+    'node_modules',
+    'bower_components',
+    'bower.json',
+    'gulpfile.js',
+    'package.json',
+    'README.md',
+    'gulp'
+]

@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<div class="btn-container" align="center">
+
+    {% for node in site.data.names %}
+    <a href="#" class="btn" style="background-color: {{node.color}};">{{node.name}}</a>
+    {% endfor %}
+
+</div>
+
+{% include slide.html version="one" %}
+{% include slide.html version="two" %}
+{% include slide.html version="three" %}
+{% include slide.html version="four" %}

@@ -1,0 +1,87 @@
+// #one
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.slides {
+
+    .slide { transition: all 300ms ease-in; }
+
+    #one & .slide {
+        transform: translateY(-20px) scale(.8);
+        opacity: 0;
+
+        &.animate-in {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    #two & {
+        perspective: 1700px;
+        perspective-origin: 0 50%;
+
+        .slide {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transform: rotateX(-190deg) scale(0);
+            transform-origin: 0 50%;
+            opacity: 0;
+            transition-duration: 1s;
+
+            &.animate-in {
+                transform: rotateX(0deg) scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    #three & {
+        perspective: 1700px;
+        perspective-origin: 50% 0%;
+
+        .slide {
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            transform: rotateY(180deg) translate3d(0, -60px, -30px);
+            transform-origin: 50% 50%;
+            transition-duration: 1s;
+            opacity: 0;
+
+            &.animate-in {
+                transform: rotateY(0deg) translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    }
+
+    #four & {
+        .slide {
+            transform: scale(1) translateX(-100%) scale(.8);
+            opacity: 0;
+
+            &.animate-in {
+                animation: slide 3s ease-in forwards;
+            }
+        }
+    }
+
+}
+
+@keyframes slide {
+    0% {
+        transform: scale(1) translateX(-100%);
+        opacity: 0;
+    }
+    10%, 90% {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateX(100%);
+        opacity: 0;
+    }
+}

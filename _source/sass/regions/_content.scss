@@ -1,0 +1,76 @@
+/* ====================================
+   Content styling
+==================================== */
+
+.page-wrap {
+    margin: 50px auto;
+    @include clearfix;
+}
+
+
+.slide-item {
+    margin-bottom: 1.4em;
+    padding: 15px;
+    border-color: rgba( $black, .2 );
+    border-style: solid;
+    @include border-width( 3px 0 );
+    background: rgba( $black, .1 );
+}
+
+
+.slides {
+    @include clearfix;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+.slide {
+    overflow: hidden;
+    width: (100% / 3);
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    border: 5px solid transparent;
+    position: relative;
+
+    img { display: block; width: 100%; }
+
+    figcaption {
+        @include position( absolute, null null 0px 0px );
+        font-size: 2em;
+        text-shadow: 0 0 3px rgba( $black, .4 );
+        color: $white;
+        padding: 5px;
+        font-weight: bold;
+    }
+}
+
+
+#trigger {
+    font-size: 3em;
+    color: $white;
+    padding: 20px;
+    display: inline-block;
+}
+
+header.heading {
+    font-size: 2em;
+    margin-bottom: .4em;
+    text-align: center;
+
+    >* { margin: 0; }
+}
+
+.focus {
+    animation: focus 1000ms forwards;
+}
+
+@keyframes focus {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: yellow;
+    }
+}
