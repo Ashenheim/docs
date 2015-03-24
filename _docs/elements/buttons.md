@@ -6,15 +6,15 @@ layout: default
 
 This is about the button styling
 
-```html
+{% highlight html %}
 <a href="{{link-to-site}}" class="btn">Button</a>
-```
+{% endhighlight %}
 
-```css
+{% highlight css %}
 .btn {
     display: inline-block;
     padding: 5px;
     color: #ffffff;
     background: #f10000;
 }
-```
+{% endhighlight %}

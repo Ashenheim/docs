@@ -8,21 +8,21 @@ This is about the button styling
 
 source
 
-```scss
+{% highlight scss %}
 @mixin breakpoint($bp) {
     @media only screen and (min-width: $bp) {
         @content;
     }
 }
-```
+{% endhighlight %}
 
 usage
 
-```scss
+{% highlight scss %}
 element {
     background: red;
     @include breakpoint(500px) {
         background: blue;
     }
 }
-```
+{% endhighlight %}

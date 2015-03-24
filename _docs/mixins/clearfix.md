@@ -8,7 +8,7 @@ This is about the button styling
 
 ###### Code
 
-```scss
+{% highlight scss %}
 @mixin clearfix() {
     *zoom: 1;
     &:before {
@@ -25,11 +25,11 @@ This is about the button styling
 %clearfix {
     @include clearfix;
 }
-```
+{% endhighlight %}
 
 ###### Usage
 
-```sass
+{% highlight sass %}
 element
     +clearfix
-```
+{% endhighlight %}
