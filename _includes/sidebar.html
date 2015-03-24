@@ -1,0 +1,5 @@
+<section class="sidebar">
+{% for cat in site.data.categories %}
+    {% include docs-list.html category=cat %}
+{% endfor %}
+</section>

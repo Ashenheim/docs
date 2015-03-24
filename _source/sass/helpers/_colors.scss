@@ -8,23 +8,23 @@ $grey                       : #EEEEEE;
 $black                      : #000000;
 
 // Brand
-$color-main                 : #303641;
-$color-sec                  : #EA474B;
-$color-accent               : lighten($color-main,20%);
+$c-main                     : #303641;
+$c-sec                      : #EA474B;
+$c-accent                   : lighten($c-main,20%);
 
 // Text
-$color-text                 : rgba($black, .8);
-$color-link                 : $color-sec;
-$color-link--hover          : lighten(saturate($color-link, 30%),10%);
-$color-link-alt             : $white;
-$color-link-alt--hover      : lighten(saturate($color-main, 20%),65%);
+$c-text                     : rgba($black, .8);
+$c-link                     : $c-sec;
+$c-link--hover              : lighten(saturate($c-link, 30%),10%);
+$c-link-alt                 : $white;
+$c-link-alt--hover          : lighten(saturate($c-main, 20%),65%);
 
 // Layout
-$color-background           : #f9f9f9;
-$color-background--sec      : lighten(saturate($color-background,5%),15%);
+$c-background               : #f9f9f9;
+$c-background--sec          : lighten(saturate($c-background,5%),15%);
 
 
 // Third party Brand colors
-$color-facebook             : #03539e;
-$color-twitter              : #35ccff;
-$color-linkedin             : #217bc1;
+$c-facebook                 : #03539e;
+$c-twitter                  : #35ccff;
+$c-linkedin                 : #217bc1;

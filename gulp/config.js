@@ -29,6 +29,7 @@ module.exports = {
             "_layouts/**",
             "_posts/**",
             "_data/**",
+            "_docs/**",
             "_config.yml", "_config.dev.yml"
         ],
         dest: paths.dest
@@ -38,7 +39,10 @@ module.exports = {
         Sass
     ------------------------------ */
     Sass: {
-        src: paths.sass + "*.{sass,scss}",
+        src: [
+            paths.sass + "*.{sass,scss}",
+            paths.sass + "**/*.{sass,scss}",
+        ],
         dest: {
             one: paths.dest + paths.assets + "css/",
             two: paths.assets + "css/"
@@ -102,6 +106,7 @@ module.exports = {
             baseDir: paths.dest
         },
         host: "localhost",
-        open: false
+        open: false,
+        port: 4000
     },
 }

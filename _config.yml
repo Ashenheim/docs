@@ -8,7 +8,7 @@ relative_permalinks: true
 title:            Proto
 tagline:
 url:
-baseurl:          "http://myawesomesite.com"
+baseurl:          "/docs"
 author:
 - name:           Patrick Gurr
 - url:            https://twitter.com/ashenheim
@@ -16,7 +16,7 @@ author:
 
 
 # Build
-markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 exclude: [
     'node_modules',
@@ -24,5 +24,12 @@ exclude: [
     'bower.json',
     'gulpfile.js',
     'package.json',
-    'README.md'
+    'README.md',
+    'gulp'
 ]
+
+collections:
+  docs:
+    output: true
+    url: /docs/:title
+    layout: default

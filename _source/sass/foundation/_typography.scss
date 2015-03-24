@@ -47,11 +47,11 @@ p {
 }
 
 a {
-	color: $color-link;
+	color: $c-link;
 	font-weight: 700;
 	text-decoration: none;
 	@include hover {
-		color: $color-link--hover;
+		color: $c-link--hover;
 	}
 }
 

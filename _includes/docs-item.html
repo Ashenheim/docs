@@ -1,0 +1,19 @@
+{% for node in site.docs %}
+{% if node.category == include.category %}
+    <article class="docs__item" id="{{node.title | replace: " ", "-" | downcase }}">
+        <div class="docs__item__header">
+
+            <h3>
+                {{node.title}}
+                <a href="#{{site.baseurl}}{{node.title | replace: " ", "-" | downcase }}">
+                    <span class="link"><i class="fa fa-link"></i></span>
+                </a>
+            </h3>
+
+        </div>
+
+        {{node.content}}
+
+    </article>
+{% endif %}
+{% endfor %}

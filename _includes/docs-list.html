@@ -1,0 +1,10 @@
+<h6>{{ include.category }}</h6>
+<ul>
+{% for node in site.docs %}
+{% if node.category == include.category %}
+    <li>
+        <a href="#{{node.title | replace: " ", "-" | downcase }}">- {{node.title}}</a>
+    </li>
+{% endif %}
+{% endfor %}
+</ul>
