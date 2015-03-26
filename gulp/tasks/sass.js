@@ -13,6 +13,7 @@ var gulp         = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
     browserSync  = require('browser-sync'),
     plumber      = require('gulp-plumber'),
+    notify       = require("gulp-notify"),
     config       = require('../config').Sass;
 
 
@@ -25,7 +26,9 @@ gulp.task('styles', function() {
     return gulp.src( config.src )
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass( config.settings )) 
+        .pipe(sass(
+            config.settings
+        ))
         .pipe(prefix( config.autoprefixer ))
         .pipe(sourcemaps.write({includeContent: false, sourceRoot: '/'}))
         .pipe(gulp.dest( config.dest.one ))

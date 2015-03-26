@@ -36,6 +36,24 @@ module.exports = {
     },
 
     /* ------------------------------
+        HTML Prettify
+    ------------------------------ */
+    Prettify: {
+        src: [
+            paths.dest + "*.{html}"
+        ],
+        dest: paths.dest,
+        settings: {
+            "indent_size": 4,
+            "indent_inner_html": true,
+            "unformatted": ['pre', 'code'],
+            "preserve_newlines": true,
+            "brace-style": "end-expand",
+            "wrap-attributes" : "force"
+        }
+    },
+
+    /* ------------------------------
         Sass
     ------------------------------ */
     Sass: {
@@ -49,7 +67,7 @@ module.exports = {
         },
         settings: {
             style: 'compressed',
-            errLogToConsole: true
+            errLogToConsole: false
         },
         autoprefixer: [
             'last 2 versions',
@@ -68,6 +86,8 @@ module.exports = {
     Scripts: {
         src: [
             paths.bower + "/jquery/dist/jquery.js",
+            paths.bower + "/angular/angular.js",
+
             paths.js + "/vendors/**/*.js",
             paths.js + "/partials/**/*.js",
             paths.js + "/script.js"

@@ -7,7 +7,7 @@
     @include position( fixed, 0 null null 0 );
     width: 270px;
     min-height: 100%;
-    background: $c-main;
+    background: $c-sec;
     color: rgba($black, .6);
 
     h1,h2,h3,h4,h5,h6,p,a {
@@ -53,13 +53,13 @@
         @include padding( $spacing-large null );
         // box-shadow: 0 1px 3px rgba( $black, .2 );
         margin-bottom: $spacing-large;
-        background: $white;
+        background: $c-accent--l;
         margin: 0 auto;
     }
 
     &__item {
-        border-top: 1px solid $grey;
-        border-bottom: 1px solid $grey;
+        border-top:    $b-main;
+        border-bottom: $b-main;
         margin-bottom: $spacing-medium;
 
 

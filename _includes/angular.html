@@ -1,0 +1,9 @@
+{% raw %}
+<section ng-app="docsList">
+    <ul>
+        <li ng-repeat="node in posts | filter:query">
+            {{node.title}}
+        </li>
+    </ul>
+</section>
+{% endraw %}

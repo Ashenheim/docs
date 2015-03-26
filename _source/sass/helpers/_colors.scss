@@ -7,10 +7,17 @@ $white                      : #ffffff;
 $grey                       : #EEEEEE;
 $black                      : #000000;
 
+$c-warning                  : #EA474B;
+
+
 // Brand
-$c-main                     : #303641;
-$c-sec                      : #EA474B;
-$c-accent                   : lighten($c-main,20%);
+$c-main                     : #82b1ff;
+$c-sec                      : #303641;
+
+$c-accent--l                : #f9f9f9;
+$c-accent                   : #e4e9eb;
+$c-accent--d                : #cfd8dc;
+
 
 // Text
 $c-text                     : rgba($black, .8);
@@ -20,7 +27,7 @@ $c-link-alt                 : $white;
 $c-link-alt--hover          : lighten(saturate($c-main, 20%),65%);
 
 // Layout
-$c-background               : #f9f9f9;
+$c-background               : #fafafa;
 $c-background--sec          : lighten(saturate($c-background,5%),15%);
 
 

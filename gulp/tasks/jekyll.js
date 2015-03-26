@@ -21,7 +21,7 @@ var jekyllPrompt = process.platform === "win32" ? "jekyll.bat" : "jekyll";
     Tasks & Functions
 ------------------------------------ */
 
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll', function (done) {
     return cp.spawn( jekyllPrompt , ['build', '-d' + config.dest ], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -34,8 +34,21 @@ gulp.task('jekyll-dev', function (done) {
 });
 
 
+
+gulp.task('jekyll-build', function() {
+    return runSequence(
+        ['jekyll'],
+        ['prettify']
+    )
+});
+
+
 gulp.task('jekyll-rebuild', function() {
-    runSequence(['jekyll-dev'], function() {
-        browserSync.reload();
-    });
+    return runSequence(
+        ['jekyll-dev'],
+        ['prettify'],
+        function() {
+            browserSync.reload();
+        }
+    );
 });
