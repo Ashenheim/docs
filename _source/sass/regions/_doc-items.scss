@@ -1,0 +1,60 @@
+
+
+.docs {
+
+    h1,h2,h3,h4,h5,h6,p,hr,ul,ol,pre {
+        max-width: 720px;
+        @include margin( null auto);
+        @include padding( null $gutter );
+    }
+
+    &__section-title {
+        padding-top: $spacing-large;
+    }
+
+
+    &__section-title {
+        font-size: 2em;
+        text-align: center;
+
+        h2 {
+            color: $c-main;
+            background: -webkit-linear-gradient(left, $c-main, $c-sec );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+    }
+
+
+    &__item {
+        @extend %clearfix;
+        @include padding( $spacing-large null );
+        border-top:    $b-main;
+        border-bottom: $b-main;
+        box-shadow: 0 0 13px rgba( $c-accent--d, .2 );
+        background: $c-accent--l;
+        margin: 0 auto $spacing-large;
+        transition: all 500ms ease-in-out;
+
+
+        &.focus {
+            border-color: $c-notify;
+            background: mix($c-notify, $white, 20%);
+        }
+
+
+        &__header {
+
+            .link {
+                opacity: 0;
+                color: $grey;
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            &:hover .link { opacity: 1; }
+        }
+    }
+}

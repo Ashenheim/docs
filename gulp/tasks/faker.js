@@ -21,7 +21,7 @@ var ammount = 80;
 var config = [
     {
         file: './_data/output.json',
-        ammount: 20000
+        ammount: 20
     }
 ];
 
@@ -35,7 +35,8 @@ gulp.task('faker', function() {
             return {
                 name: faker.name.findName(),
                 email: faker.internet.email(),
-                image: faker.internet.avatar()
+                image: faker.internet.avatar(),
+                city: faker.image.city()
             }
         };
 

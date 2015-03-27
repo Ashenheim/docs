@@ -12,8 +12,14 @@ $(function ($) {
             target = $( $(this).attr('href') );
 
             $('html, body').stop().animate({
-                scrollTop: target.offset().top
-            }, 1000);
+                scrollTop: target.offset().top - 50
+            }, 500);
+
+            target
+                .addClass('focus')
+                .on('transitionend webkitTransitionEnd mozTransitionEnd webkitTransitionEnd oTransitionEnd', function() {
+                    target.removeClass('focus');
+                });
 
         });
 

@@ -1,19 +1,6 @@
 <section class="sidebar">
+{% include header.html %}
 {% for cat in site.data.categories %}
     {% include docs-list.html category=cat %}
 {% endfor %}
-
-
-<nav>
-    <ul>
-        {% for page in site.pages %}
-        {% if page.title %}
-        {% if page.layout != "none" %}
-        <li><a href="{{page.url}}">{{ page.title }}</a></li>
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-    </ul>
-</nav>
-
 </section>

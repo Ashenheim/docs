@@ -12,70 +12,33 @@
 
     h1,h2,h3,h4,h5,h6,p,a {
         @include padding( null $gutter );
-        color: rgba($white, .6);
+        color: $c-sec20;
     }
 
     a {
         font-weight: normal;
+        display: block;
         &:hover {
-            color: $black;
+            color: $white;
+            background: $c-sec80;
         }
     }
 
     ul { margin: 0; padding: 0; margin-bottom: $spacing-medium; list-style-type: none; }
 
-    li { margin: 0; }
+    li {
+        margin: 0;
+
+        a {
+            @include padding( 10px null );
+        }
+    }
 
     .search input {}
 }
 
 .main-content {
-    padding-left: 270px;
     width: 100%;
-}
-
-
-.docs {
-
-    h1,h2,h3,h4,h5,h6,p,hr,ul,ol,pre {
-        max-width: 720px;
-        @include margin( null auto);
-        @include padding( null $gutter );
-    }
-
-    &__section-title {
-        padding-top: $spacing-large;
-    }
-
-
-    &__item {
-        @extend %clearfix;
-        @include padding( $spacing-large null );
-        // box-shadow: 0 1px 3px rgba( $black, .2 );
-        margin-bottom: $spacing-large;
-        background: $c-accent--l;
-        margin: 0 auto;
-    }
-
-    &__item {
-        border-top:    $b-main;
-        border-bottom: $b-main;
-        margin-bottom: $spacing-medium;
-
-
-        &__header {
-
-            .link {
-                opacity: 0;
-                color: $grey;
-                &:hover {
-                    color: $black;
-                }
-            }
-
-            &:hover .link { opacity: 1; }
-        }
-    }
-
-
+    padding-left: 270px;
+    padding-bottom: 100vh;
 }

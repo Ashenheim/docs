@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:            Proto
+title:            Docs
 tagline:
-url:
+url:              "http://ashenheim.github.com/docs"
 baseurl:          "/docs"
 author:
 - name:           Patrick Gurr
