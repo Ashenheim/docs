@@ -1,5 +1,5 @@
 # CONFIG for Jekyll (Development version)
 
-url:         "http://localhost:4000/"
+url:         "http://localhost:4040/"
 baseurl:     ""
 highlighter: rouge

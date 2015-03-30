@@ -1,6 +1,7 @@
 ---
 title: Spinner
 category: elements
+layout: docs
 ---
 
 ###### Cube spinner

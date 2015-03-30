@@ -13,13 +13,12 @@
             @include transition;
             padding: 10px;
             display: inline-block;
-            border: 5px solid $c-sec80;
+            border: 5px solid $c-main80;
             font-weight: bold;
 
             &:hover {
-                color: $c-sec;
+                color: $c-main;
                 background: $white;
-                box-shadow: 0 0 3px rgba( $black, .4 );
             }
         }
     }

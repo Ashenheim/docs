@@ -35539,11 +35539,15 @@ $(function ($) {
         trigger.on('click', function(e) {
             e.preventDefault();
 
-            $('html').toggleClass('navigation-is-active');
+            $('html')
+                .toggleClass('is-fixed')
+                .toggleClass('navigation-is-active');
         });
 
         navLink.on('click', function() {
-            $('html').removeClass('navigation-is-active');
+            $('html')
+                .removeClass('is-fixed')
+                .removeClass('navigation-is-active');
         });
     }
 

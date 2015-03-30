@@ -1,6 +1,7 @@
 ---
 title: Testing inline SCSS
 category: mixins
+layout: docs
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quod, ad autem ut facilis libero totam natus. Tenetur asperiores nulla mollitia officia facilis, explicabo atque a est molestiae modi deleniti, expedita in. Perferendis natus vitae ipsum, sint quo ut, dolore doloremque quis omnis quaerat repudiandae similique nihil, reiciendis veniam quos itaque aliquid id. Beatae sed aspernatur eos, reprehenderit provident accusantium ad, minus, officia debitis quis possimus iure explicabo architecto accusamus assumenda consequatur.

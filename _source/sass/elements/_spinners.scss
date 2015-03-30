@@ -11,7 +11,7 @@
         &:after {
             content: '';
             @include size(50px);
-            background: $c-sec;
+            background: $c-main;
             display: inline-block;
             animation: box-spinner 3s cubic-bezier(.09, .57, .49, .9) infinite;
         }
@@ -26,7 +26,7 @@
             > div {
                 width: 10px;
                 height: 50px;
-                background: $c-sec;
+                background: $c-main;
                 display: inline-block;
                 margin: 0 1px;
                 transform: scaleY(.5);

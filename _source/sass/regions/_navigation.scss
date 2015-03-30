@@ -7,18 +7,29 @@
 
     @include bp-medium { display: block; }
 
+    @include below($bp-medium) {
+        @include position( fixed, 0 null null 0 );
+        @include size(100%);
+        background: $c-sec;
+        z-index: 10;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
     html.navigation-is-active & {
         display: block;
     }
 
 
     &-trigger {
-        @include position( absolute, 0 0 null null );
+        @include transition;
         @include padding( null 0 );
         font-size: 2em;
         width: 3em;
         height:      68px;
         line-height: 68px;
+        color: $c-main20;
+        text-align: center;
 
         &:hover,
         html.navigation-is-active & {
@@ -27,6 +38,14 @@
 
         @include bp-medium {
             display: none;
+        }
+
+        header.main-header & {
+            @include position( absolute, 0 0 null null );
+        }
+
+        .navigation &:hover {
+            background: $c-warning;
         }
     }
 }

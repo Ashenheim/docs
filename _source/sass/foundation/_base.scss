@@ -23,3 +23,8 @@ body {
 	background: $c-main;
 	color: $white;
 }
+
+
+html.is-fixed {
+    overflow: hidden;
+}

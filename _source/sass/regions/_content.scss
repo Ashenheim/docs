@@ -4,7 +4,7 @@
 
 .sidebar {
     @include padding( $spacing-large null );
-    @include radial-gradient( circle at 0% 100%, $c-main, $c-sec );
+    @include radial-gradient( circle at 100% 0%, $c-main, $c-sec );
     color: $c-sec80;
 
     @include bp-medium {
@@ -13,6 +13,7 @@
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
+        border-right: 1px solid $black;
     }
 
     h1,h2,h3,h4,h5,h6,p,a {
