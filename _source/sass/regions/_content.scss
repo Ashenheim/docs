@@ -4,13 +4,16 @@
 
 .sidebar {
     @include padding( $spacing-large null );
-    @include position( fixed, 0 null null 0 );
-    width: 270px;
-    height: 100%;
     background: $c-sec;
     color: $c-sec80;
-    overflow-x: hidden;
-    overflow-y: auto;
+
+    @include bp-medium {
+        @include position( fixed, 0 null null 0 );
+        width: 270px;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 
     h1,h2,h3,h4,h5,h6,p,a {
         @include padding( null $gutter );
@@ -54,6 +57,9 @@
 
 .main-content {
     width: 100%;
-    padding-left: 270px;
     padding-bottom: 100vh;
+
+    @include bp-medium {
+        padding-left: 270px;
+    }
 }

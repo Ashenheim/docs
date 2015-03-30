@@ -21,7 +21,7 @@ $spinner-timing: 500ms;
 
             @for $i from 1 through 5 {
                 &:nth-child(#{$i}) {
-                    animation-delay: $i * ( -#{$spinner-delay} + $spinner-timing);
+                    animation-delay: $i * $spinner-timing;
                 }
             }
         }
