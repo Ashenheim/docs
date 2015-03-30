@@ -27,7 +27,7 @@
     }
 
 
-    &__item {
+    &-item {
         @extend %clearfix;
         @include padding( $spacing-large null );
         border-top:    $b-main;
@@ -58,6 +58,12 @@
             }
 
             &:hover .link { opacity: 1; }
+        }
+
+        &__header,
+        &__content {
+            @include margin( null 5% );
+            width: 90%;
         }
     }
 }
