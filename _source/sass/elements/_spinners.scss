@@ -1,37 +1,79 @@
-$spinner-delay: 1000ms;
-$spinner-timing: 500ms;
+/* ====================================
+    Spinner styling
+==================================== */
+
 
 .spinner {
-    text-align: center;
+    display: inline-block;
 
-    &-inner {
-        display: inline-block;
-        font-size: 0;
+    .box-spinner & {
 
-        div {
-            font-size: initial;
-            height: 5em;
-            width: 1em;
-            background: $c-main;
+        &:after {
+            content: '';
+            @include size(50px);
+            background: $c-sec;
             display: inline-block;
-            margin: 0 1px;
-            animation: spinner 300ms infinite alternate;
-            transform: scaleY(.5);
-            transform-origin: 50% 50%;
+            animation: box-spinner 3s cubic-bezier(.09, .57, .49, .9) infinite;
+        }
+    }
 
-            @for $i from 1 through 5 {
-                &:nth-child(#{$i}) {
-                    animation-delay: $i * $spinner-timing;
+    .line-loader & {
+
+        &-inner {
+            display: inline-block;
+            font-size: 0;
+
+            > div {
+                width: 10px;
+                height: 50px;
+                background: $c-sec;
+                display: inline-block;
+                margin: 0 1px;
+                transform: scaleY(.5);
+                animation: line-loader 1s cubic-bezier(.09, .57, .49, .9) infinite;
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 0.1s * $i;
+                    }
                 }
             }
         }
     }
+
+    &-container {
+        text-align: center;
+    }
+
 }
 
-@keyframes spinner {
-    from {
+
+
+
+
+/* Animations
+==================================== */
+
+
+@keyframes box-spinner {
+    25% {
+        transform: perspective(120px) rotateX(180deg) rotateY(0);
+    } 50% {
+        transform: perspective(120px) rotateX(180deg) rotateY(180deg);
+    } 75% {
+        transform: perspective(120px) rotateX(0) rotateY(180deg);
+    } 100% {
+        transform: perspective(120px) rotateX(0) rotateY(0);
+    }
+}
+
+
+@keyframes line-loader {
+    0%, 100% {
         transform: scaleY(.5);
-    } to {
+        opacity: 1;
+    } 50% {
         transform: scaleY(1);
+        opacity: .7;
     }
 }
