@@ -2,19 +2,24 @@
     <div class="inner">
 
         {% include header.html %}
-        {% for cat in site.data.categories %}
-            {% include docs-list.html category=cat %}
-        {% endfor %}
 
-        <hr>
+        <div class="navigation">
 
-        <ul class="list-small">
-        {% for node in site.docs %}
-            <li>
-                <a href="{{node.url}}">{{node.title}}</a>
-            </li>
-        {% endfor %}
-        </ul>
+            {% for cat in site.data.categories %}
+                {% include docs-list.html category=cat %}
+            {% endfor %}
+
+            <hr>
+
+            <ul class="list-small">
+            {% for node in site.docs %}
+                <li>
+                    <a href="{{node.url}}">{{node.title}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+
+        </div>
 
     </div>
 </section>

@@ -4,19 +4,28 @@
 
 .main-header {
     text-align: center;
-    margin-bottom: $spacing-large;
+    position: relative;
 
-    .site-title a {
-        @include transition;
-        padding: 10px;
-        display: inline-block;
-        border: 5px solid $c-sec80;
-        font-weight: bold;
+    .site-title {
+        margin-bottom: 0;
 
-        &:hover {
-            color: $c-sec;
-            background: $white;
-            box-shadow: 0 0 3px rgba( $black, .4 );
+        a {
+            @include transition;
+            padding: 10px;
+            display: inline-block;
+            border: 5px solid $c-sec80;
+            font-weight: bold;
+
+            &:hover {
+                color: $c-sec;
+                background: $white;
+                box-shadow: 0 0 3px rgba( $black, .4 );
+            }
         }
+    }
+
+
+    @include bp-medium {
+        margin-bottom: $spacing-large;
     }
 }

@@ -1,3 +1,32 @@
 /* ====================================
 	Button styles
 ==================================== */
+
+
+.btn {
+    background: $white;
+    border: 5px solid $c-link;
+    padding: $spacing-small $spacing-medium;
+    display: inline-block;
+    text-align: center;
+    @include transition;
+
+    &:hover {
+        color: $white;
+        background: $c-link--hover;
+        border-color: $c-link--hover;
+    }
+
+
+    &-alt {
+        @extend .btn;
+        background: $c-link;
+        color: $white;
+
+        &:hover {
+            border-color: $white;
+            background: $white;
+            color: $c-link--hover;
+        }
+    }
+}

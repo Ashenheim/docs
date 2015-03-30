@@ -4,7 +4,7 @@
 
 .sidebar {
     @include padding( $spacing-large null );
-    background: $c-sec;
+    @include radial-gradient( circle at 0% 100%, $c-main, $c-sec );
     color: $c-sec80;
 
     @include bp-medium {
@@ -43,7 +43,7 @@
 
     .list-small {
         @include padding( 10px null );
-        background: $c-sec120;
+        background: rgba( $black, .1 );
         a {
             @include padding( 3px null );
             &:hover {
