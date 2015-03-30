@@ -45,6 +45,9 @@
 
 
         &__header {
+            @include padding( $spacing-medium null );
+            border-bottom: $b-main;
+            margin-bottom: $spacing-medium;
 
             .link {
                 opacity: 0;

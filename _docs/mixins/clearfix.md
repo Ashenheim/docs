@@ -1,7 +1,7 @@
 ---
 title: Clearfix
 category: mixins
-layout: default
+layout: docs
 ---
 
 This is about the button styling

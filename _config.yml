@@ -31,5 +31,4 @@ exclude: [
 collections:
   docs:
     output: true
-    url: /docs/:title
-    layout: default
+    permalink: /docs/:title/

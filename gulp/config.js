@@ -67,7 +67,7 @@ module.exports = {
         },
         settings: {
             style: 'compressed',
-            errLogToConsole: false
+            errLogToConsole: true
         },
         autoprefixer: [
             'last 2 versions',
@@ -127,6 +127,6 @@ module.exports = {
         },
         host: "localhost",
         open: false,
-        port: 4000
+        port: 4040
     },
 }

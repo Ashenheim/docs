@@ -1,7 +1,7 @@
 ---
 title: Button styling
 category: elements
-layout: default
+layout: docs
 ---
 
 This is about the button styling

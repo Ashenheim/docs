@@ -1,0 +1,14 @@
+---
+title: Spinner
+category: elements
+---
+
+<div class="spinner">
+    <div class="spinner-inner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>

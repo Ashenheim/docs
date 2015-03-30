@@ -1,0 +1,37 @@
+$spinner-delay: 1000ms;
+$spinner-timing: 500ms;
+
+.spinner {
+    text-align: center;
+
+    &-inner {
+        display: inline-block;
+        font-size: 0;
+
+        div {
+            font-size: initial;
+            height: 5em;
+            width: 1em;
+            background: $c-main;
+            display: inline-block;
+            margin: 0 1px;
+            animation: spinner 300ms infinite alternate;
+            transform: scaleY(.5);
+            transform-origin: 50% 50%;
+
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * ( -#{$spinner-delay} + $spinner-timing);
+                }
+            }
+        }
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: scaleY(.5);
+    } to {
+        transform: scaleY(1);
+    }
+}
