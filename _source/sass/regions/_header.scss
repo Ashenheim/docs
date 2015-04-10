@@ -13,7 +13,7 @@
             @include transition;
             padding: 10px;
             display: inline-block;
-            border: 5px solid $c-main80;
+            border: 5px solid rgba( $white, .1 );
             font-weight: bold;
 
             &:hover {

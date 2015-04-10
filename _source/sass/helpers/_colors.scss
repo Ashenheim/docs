@@ -2,6 +2,10 @@
     Colors
 ==================================== */
 
+
+// Variables
+// ---------
+
 // Generic
 $white                      : #ffffff;
 $grey                       : #999;
@@ -12,8 +16,12 @@ $c-notify                   : #FFA500;
 
 
 // Brand
-$c-main                     : #3366CC;
-$c-sec                      : #551A8B;
+// $c-main                     : #3366CC;
+// $c-sec                      : #551A8B;
+// $c-main                     : #171032;
+// $c-sec                      : #B31B67;
+$c-main                     : #E35542;
+$c-sec                      : #520435;
 
 $c-main80                   : mix( $c-main, $white, 80% );
 $c-main60                   : mix( $c-main, $white, 60% );
@@ -25,6 +33,8 @@ $c-sec80                    : mix( $c-sec, $white, 80% );
 $c-sec60                    : mix( $c-sec, $white, 60% );
 $c-sec40                    : mix( $c-sec, $white, 40% );
 $c-sec20                    : mix( $c-sec, $white, 20% );
+
+
 
 $c-accent--l                : #f9f9f9;
 $c-accent                   : #e4e9eb;
@@ -47,3 +57,10 @@ $c-background--sec          : lighten(saturate($c-background,5%),15%);
 $c-facebook                 : #03539e;
 $c-twitter                  : #35ccff;
 $c-linkedin                 : #217bc1;
+
+
+// Functions
+
+@function c-main($p) {
+    @return mix( $c-main, $white, $p );
+}

@@ -87,6 +87,8 @@ module.exports = {
         src: [
             paths.bower + "/jquery/dist/jquery.js",
             paths.bower + "/angular/angular.js",
+            paths.bower + '/jScrollPane/script/jquery.mousewheel.js',
+            paths.bower + '/jScrollPane/script/jquery.jscrollpane.js',
 
             paths.js + "/vendors/**/*.js",
             paths.js + "/partials/**/*.js",

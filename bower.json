@@ -18,6 +18,8 @@
     "jquery": "~2.1.3",
     "font-awesome": "~4.3.0",
     "bourbon": "4.0.0",
-    "angular": "~1.3.15"
+    "angular": "~1.3.15",
+    "jquery-mousewheel": "~3.1.12",
+    "jScrollPane": "~2.0.21"
   }
 }

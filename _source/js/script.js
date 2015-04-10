@@ -12,13 +12,14 @@ $(document).ready(function() {
 
     scrollToID();
     menuToggle();
+    stickyHeader('.sidebar');
 
 
     /* ------------------------------
         Events
     ------------------------------ */
 
-
+    // $('.navigation').jScrollPane();
 
 
 });

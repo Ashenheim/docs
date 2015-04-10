@@ -13,19 +13,20 @@
                 {% include docs-list.html category=cat %}
             {% endfor %}
 
-            {% comment %}
 
             <hr>
 
             <ul class="list-small">
-            {% for node in site.docs %}
+            {% for post in site.posts %}
                 <li>
-                    <a href="{{node.url}}">{{node.title}}</a>
+                    <a href="{{post.url}}">
+                        {{post.title}} <br>
+                        <small><date>{{post.date | date_to_string}}</date></small>
+                    </a>
                 </li>
             {% endfor %}
             </ul>
 
-            {% endcomment %}
 
         </div>
 

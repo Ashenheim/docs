@@ -8,7 +8,12 @@ This is about the button styling
 
 ###### Code
 
-{% highlight scss %}
+# Heading one
+## heading two
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sint vel dignissimos voluptatem aliquid laudantium porro natus, necessitatibus magnam iure nulla neque veniam, vero eligendi nisi. Necessitatibus deserunt maxime, distinctio.
+
+```scss
 @mixin clearfix() {
     *zoom: 1;
     &:before {
@@ -25,7 +30,7 @@ This is about the button styling
 %clearfix {
     @include clearfix;
 }
-{% endhighlight %}
+```
 
 ###### Usage
 

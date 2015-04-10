@@ -13,7 +13,17 @@
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
-        border-right: 1px solid $black;
+        border-right: 5px solid $c-accent--d;
+    }
+
+    @include below(700px) {
+        position: sticky;
+        top: 15px;
+
+        &.sticky {
+            position: sticky;
+            top: 0;
+        }
     }
 
     h1,h2,h3,h4,h5,h6,p,a {
@@ -26,7 +36,7 @@
         display: block;
         &:hover {
             color: $white;
-            background: $c-sec80;
+            background: rgba( $black, .1 );
         }
     }
 
