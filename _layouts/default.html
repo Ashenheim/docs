@@ -9,11 +9,17 @@ layout: compress
 
 <body>
 
+    <div id="Top"></div>
+
     {% include sidebar.html %}
 
     <div class="main-content">
         {{ content }}
     </div>
+
+    <a href="#Top" class="scrollTop">
+        <i class="fa fa-angle-up"></i>
+    </a>
 
     <script src="{{ site.baseurl }}/assets/js/global.js"></script>
 

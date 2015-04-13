@@ -11,10 +11,15 @@
     @include below($bp-medium) {
         @include position( fixed, 0 null null 0 );
         @include size(100%);
-        background: $c-sec;
+        background: $c-main;
         z-index: 10;
         overflow-x: hidden;
         overflow-y: auto;
+        color: rgba( $white, .6 );
+
+        hr {
+            display: none;
+        }
     }
 
     html.navigation-is-active & {

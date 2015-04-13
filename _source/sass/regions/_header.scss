@@ -6,7 +6,6 @@
     text-align: center;
     position: relative;
     @include padding( $spacing-large null );
-    @include radial-gradient( top, contain, $c-main, $c-sec );
 
     .site-title {
         margin-bottom: 0;

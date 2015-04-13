@@ -19,6 +19,7 @@ pre {
     hyphens: none;
     position: relative;
     margin-bottom: $spacing-large;
+    box-shadow: 0 0 3px $c-accent--d;
 
 
     code {
@@ -38,8 +39,10 @@ pre {
     content: attr(data-lang);
     display: block;
     font-weight: bold;
-    color: rgba(white, .5);
-    border-bottom: 1px solid rgba( white, .5 );
-    padding-bottom: 5px;
+    color: $c-accent--d;
+    margin: -15px -15px 15px;
+    padding: 15px 15px;
     margin-bottom: $gutter;
+    background: $c-accent--l;
+    text-shadow: none;
 }

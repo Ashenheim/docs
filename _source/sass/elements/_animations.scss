@@ -1,0 +1,30 @@
+.main-content {
+    transition: all 300ms ease-in-out;
+    transform: translateY(0);
+    overflow: hidden;
+
+    html.navigation-is-active & {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+.navigation {
+
+    html.navigation-is-active & {
+        animation: nav-animation-in $easing;
+    }
+}
+
+@keyframes nav-animation-in {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: scale(0);
+    } 1% {
+        display: block;
+    } 100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}

@@ -54,9 +54,9 @@
 
             .link {
                 opacity: 0;
-                color: $grey;
+                color: $c-accent;
                 &:hover {
-                    color: $black;
+                    color: $c-accent--d;
                 }
             }
 

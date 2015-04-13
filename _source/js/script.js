@@ -12,7 +12,6 @@ $(document).ready(function() {
 
     scrollToID();
     menuToggle();
-    stickyHeader('.sidebar');
 
 
     /* ------------------------------

@@ -4,8 +4,7 @@
 
 .sidebar {
     @include radial-gradient( circle at 100% 0%, $c-main, $c-sec );
-    background: $c-sec;
-    color: $c-sec80;
+    color: rgba($white, .8);
 
     @include bp-medium {
         @include position( fixed, 0 null null 0 );
@@ -73,5 +72,22 @@
 
     @include bp-medium {
         padding-left: 270px;
+    }
+}
+
+.scrollTop {
+    @include position( fixed, null 0 0 null );
+    line-height: 1em;
+    display: inline-block;
+    color: $white;
+    background: $c-accent;
+    text-align: center;
+    font-size: 3em;
+    width: 80px;
+    height: 50px;
+
+    &:hover, &:active, &:focus {
+        color: $white;
+        background: $c-accent--d;
     }
 }
