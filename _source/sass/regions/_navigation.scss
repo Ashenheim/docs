@@ -4,6 +4,7 @@
 
 .navigation {
     display: none;
+    padding-top: $spacing-large;
 
     @include bp-medium { display: block; }
 
@@ -28,7 +29,7 @@
         width: 3em;
         height:      68px;
         line-height: 68px;
-        color: $c-main20;
+        color: $c-sec20;
         text-align: center;
 
         &:hover,
@@ -41,11 +42,14 @@
         }
 
         header.main-header & {
-            @include position( absolute, 0 0 null null );
+            @include position( absolute, 33px 0 null null );
         }
 
-        .navigation &:hover {
-            background: $c-warning;
+        .navigation & {
+            &:hover {
+                background: $c-warning;
+            }
+            @include position( absolute, 0 0 null null );
         }
     }
 }

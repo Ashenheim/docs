@@ -7,6 +7,9 @@
         @include margin( null auto);
         @include padding( null $gutter );
     }
+    pre {
+        padding: 0;
+    }
 
     &__section-title {
         padding-top: $spacing-large;

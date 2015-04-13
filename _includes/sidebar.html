@@ -20,8 +20,7 @@
             {% for post in site.posts %}
                 <li>
                     <a href="{{post.url}}">
-                        {{post.title}} <br>
-                        <small><date>{{post.date | date_to_string}}</date></small>
+                        {{post.title}} - <small><date>{{post.date | date_to_string}}</date></small>
                     </a>
                 </li>
             {% endfor %}
