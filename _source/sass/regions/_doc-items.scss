@@ -2,6 +2,8 @@
 
 .docs {
 
+    margin-left: -5px;
+
     h1,h2,h3,h4,h5,h6,p,hr,ul,ol,pre {
         max-width: 720px;
         @include margin( null auto);
@@ -39,6 +41,8 @@
         background: $c-accent--l;
         margin: 0 auto $spacing-large;
         transition: all 500ms ease-in-out;
+    position: relative;
+    z-index: 2;
 
 
         &.focus {

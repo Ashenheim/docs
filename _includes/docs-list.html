@@ -1,10 +1,10 @@
 <section class="docs__list {{include.category}}">
-    <h6>{{ include.category }}</h6>
+    <h6>{{ include.category | capitalize }}</h6>
     <ul>
     {% for node in site.docs %}
     {% if node.category == include.category %}
         <li>
-            <a href="#{{node.title | replace: " ", "-" | downcase }}">- {{node.title}}</a>
+            <a href="{% if page.title !='Docs' %}{{site.url}}{{site.baseurl}}{%endif%}#{{node.title | replace: " ", "-" | downcase }}">- {{node.title}}</a>
         </li>
     {% endif %}
     {% endfor %}

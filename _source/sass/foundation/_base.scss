@@ -28,3 +28,27 @@ body {
 html.is-fixed {
     overflow: hidden;
 }
+
+
+// Define breakpoints for Javascript
+
+@mixin define-breakpoint($name) {
+    &:after {
+        content: $name;
+        display: none;
+    }
+}
+
+body {
+    @include bp-small(){
+        @include define-breakpoint("bp-small");
+    }
+
+    @include bp-medium(){
+        @include define-breakpoint("bp-medium");
+    }
+
+    @include bp-large(){
+        @include define-breakpoint("bp-large");
+    }
+}

@@ -30,19 +30,23 @@ pre {
         white-space: pre;
         overflow: auto;
         display: block;
-        text-shadow: 0 0 1px rgba( $black, .5 );
+        text-shadow: 0 1px 1px rgba( $black, .5 );
     }
 }
 
 
-.highlight code:before {
-    content: attr(data-lang);
-    display: block;
-    font-weight: bold;
-    color: $c-accent--d;
-    margin: -15px -15px 15px;
-    padding: 15px 15px;
-    margin-bottom: $gutter;
-    background: $c-accent--l;
-    text-shadow: none;
+.highlight code {
+    padding-top: 5em;
+
+    &:before {
+        @include position( absolute, 0 0 null 0 );
+        content: attr(data-lang);
+        display: block;
+        font-weight: bold;
+        color: $c-accent--d;
+        padding: 15px 15px;
+        margin-bottom: $gutter;
+        background: $c-accent--l;
+        text-shadow: none;
+    }
 }

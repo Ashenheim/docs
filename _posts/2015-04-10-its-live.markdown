@@ -1,6 +1,6 @@
 ---
 title: It's live!
-layout: page
+layout: post
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim obcaecati, tenetur consequuntur fugit temporibus ipsam mollitia excepturi blanditiis numquam libero nobis architecto reprehenderit maxime sint, eligendi itaque vitae rem quae. Non hic ipsa laborum omnis labore mollitia eligendi! Laborum omnis inventore praesentium provident.

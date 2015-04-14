@@ -9,10 +9,24 @@
     }
 }
 
-.navigation {
-
-    html.navigation-is-active & {
+.docs-navigation {
+    html.navigation-is-active &,
+    html.search-is-active & {
         animation: nav-animation-in $easing;
+    }
+}
+
+.ani__slide-in {
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100px);
+        opacity: .5;
+    } 100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

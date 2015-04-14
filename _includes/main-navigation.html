@@ -1,0 +1,13 @@
+{% assign pages = site.pages | sort:"weight" %}
+
+<section class="main-navigation">
+    <ul class="main-navigation__list">
+        {% for page in pages reversed %}
+        {% if page.title %}
+        <li>
+            <a href="{{page.url}}">{{ page.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</section>

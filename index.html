@@ -1,13 +1,13 @@
 ---
+title: Docs
 layout: page
+weight: 10
 ---
-
-{% include angular.html %}
 
 <div class="docs">
 {% for cat in site.data.categories %}
     <div class="docs__section-title">
-        <h2>{{cat}}</h2>
+        <h2>{{cat | capitalize}}</h2>
     </div>
 
     {% include docs-item.html category=cat %}

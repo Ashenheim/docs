@@ -2,7 +2,26 @@
     Navigation
 ==================================== */
 
-.navigation {
+.main-navigation {
+    @include padding( $spacing-large $gutter );
+    text-align: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border-bottom: 1px solid $c-accent;
+        display: inline-block;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: $gutter;
+    }
+}
+
+.docs-navigation {
     display: none;
     padding-top: $spacing-large;
 
@@ -11,7 +30,7 @@
     @include below($bp-medium) {
         @include position( fixed, 0 null null 0 );
         @include size(100%);
-        background: $c-main;
+        background: rgba( #222, .95 );
         z-index: 10;
         overflow-x: hidden;
         overflow-y: auto;
@@ -36,6 +55,7 @@
         line-height: 68px;
         color: $c-sec20;
         text-align: center;
+        cursor: pointer;
 
         &:hover,
         html.navigation-is-active & {
@@ -50,11 +70,11 @@
             @include position( absolute, 33px 0 null null );
         }
 
-        .navigation & {
+        .docs-navigation & {
             &:hover {
                 background: $c-warning;
             }
-            @include position( absolute, 0 0 null null );
+            @include position( fixed, 0 0 null null );
         }
     }
 }

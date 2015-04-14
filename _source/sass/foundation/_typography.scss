@@ -62,7 +62,8 @@ a {
 
 hr {
 	border: none;
-	border-bottom: 1px solid $grey;
+	border-top:    1px solid $c-accent;
+	border-bottom: 1px solid $white;
 	width: 100%;
 }
 

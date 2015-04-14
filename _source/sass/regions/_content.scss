@@ -13,16 +13,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         border-right: 5px solid $c-accent--d;
-    }
-
-    @include below(700px) {
-        position: sticky;
-        top: 15px;
-
-        &.sticky {
-            position: sticky;
-            top: 0;
-        }
+        z-index: 2;
     }
 
     h1,h2,h3,h4,h5,h6,p,a {
@@ -40,7 +31,7 @@
     }
 
     hr {
-        border-color: $c-sec80;
+        border-color: rgba( $white, .2 );
     }
 
     ul { margin: 0; padding: 0; margin-bottom: $spacing-medium; list-style-type: none; }
@@ -86,8 +77,47 @@
     width: 80px;
     height: 50px;
 
+    i { position: relative; z-index: 1; }
+
+    &:after {
+        @include position( absolute, 0 );
+        @include radial-gradient( circle at 0% 0%, $c-main, $c-sec );
+        content: '';
+        opacity: 0;
+        transition: all $easing-fast;
+    }
+
     &:hover, &:active, &:focus {
         color: $white;
         background: $c-accent--d;
+
+        &:after {
+            opacity: 1;
+            box-shadow: 0 0 3px rgba( $black, .4 );
+        }
+    }
+}
+
+
+.search {
+    @include size(100%);
+    @include position( fixed, 0 null null 0 );
+    z-index: 9;
+    background: rgba( $c-accent--l, .95 );
+    display: none;
+
+    &__field {
+        @include margin( $spacing-large auto null );
+        line-height: 1em;
+        font-size: 3em;
+        position: relative;
+        max-width: 600px;
+
+
+        >.icon {
+            @include position( absolute, 50% $gutter null null );
+            transform: translateY(-50%);
+            display: inline-block;
+        }
     }
 }

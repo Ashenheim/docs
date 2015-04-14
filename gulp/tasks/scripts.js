@@ -13,6 +13,7 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     plumber      = require('gulp-plumber'),
     browserSync  = require('browser-sync'),
+    ngAnnotate   = require('gulp-ng-annotate'),
     config       = require('../config').Scripts;
 
 
@@ -25,6 +26,7 @@ gulp.task('scripts', function() {
     return gulp.src( config.src )
         .pipe(plumber())
         .pipe(concat('global.js'))
+        .pipe(ngAnnotate())
         .pipe(gulp.dest( config.dest.one ))
         .pipe(gulp.dest( config.dest.two ))
         .pipe(rename('global.min.js'))

@@ -1,7 +1,7 @@
 $(function ($) {
 
     menuToggle = function() {
-        var trigger = $('.navigation-trigger'),
+        var trigger = $('.docs-navigation-trigger'),
             element = $('.site-title'),
             navLink = $('.docs__list a');
 

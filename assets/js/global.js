@@ -37182,26 +37182,25 @@ var minlengthDirective = function() {
 
 }));
 
-var json_file = '/all-docs.json';
+var json_file = '/search-docs.json';
+var App = angular.module('searchApp', []);
 
-var App = angular.module('docsList', []);
-
-App.controller('docs', function($scope, $http) {
+App.controller('search', ["$scope", "$http", function($scope, $http) {
 
     $http.get( json_file ).then(
         function(post){
             $scope.query = {}
-            $scope.queryBy = '$'
             $scope.posts = post.data;
             $scope.sort = "date"
         }
     );
 
-});
+
+}]);
 $(function ($) {
 
     menuToggle = function() {
-        var trigger = $('.navigation-trigger'),
+        var trigger = $('.docs-navigation-trigger'),
             element = $('.site-title'),
             navLink = $('.docs__list a');
 
@@ -37228,7 +37227,7 @@ $(function ($) {
     scrollToID = function (param) {
 
 
-        $('a[href^="#"]').on('click', function (event) {
+        $('.docs-navigation a[href^="#"]').on('click', function (event) {
 
             event.preventDefault();
 

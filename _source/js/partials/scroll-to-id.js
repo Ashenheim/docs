@@ -5,7 +5,7 @@ $(function ($) {
     scrollToID = function (param) {
 
 
-        $('a[href^="#"]').on('click', function (event) {
+        $('.docs-navigation a[href^="#"]').on('click', function (event) {
 
             event.preventDefault();
 

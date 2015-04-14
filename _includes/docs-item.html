@@ -1,6 +1,6 @@
 {% for node in site.docs %}
 {% if node.category == include.category %}
-<article class="docs-item" id="{{node.title | replace: " ", "-" | downcase }}" class="{{node.title | replace: " ", "-" | downcase }}">
+<article class="docs-item ani__slide-in" id="{{node.title | replace: " ", "-" | downcase }}" class="{{node.title | replace: " ", "-" | downcase }}">
 
     {% if node.sass %}
     <style>

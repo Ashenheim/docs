@@ -1,0 +1,15 @@
+---
+layout: page
+---
+<article class="post">
+    <header class="post__header">
+        <h1>{{page.title}}</h1>
+        {% if page.date %}<p>
+            <time>{{ page.date | date_to_string }}</time>
+        </p>{% endif %}
+        <hr>
+    </header>
+    <section class="post__content">
+        {{content}}
+    </section>
+</article>

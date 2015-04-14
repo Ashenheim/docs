@@ -1,11 +1,9 @@
-{% comment %}
 {% raw %}
-<section ng-app="docsList">
-    <ul>
+<section ng-app="searchApp">
+    <ul ng-controller="search">
         <li ng-repeat="node in posts | filter:query">
-            {{node.title}}
+            {{node.id}}
         </li>
     </ul>
 </section>
 {% endraw %}
-{% endcomment %}

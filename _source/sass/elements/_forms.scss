@@ -9,5 +9,12 @@ input[type=url],
 input[type=email],
 input[type=number],
 textarea {
+    font-weight: bold;
+    width: 100%;
+    padding: $gutter;
+    border: 3px solid $c-accent;
 
+    &:focus {
+        outline: none;
+    }
 }
