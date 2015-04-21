@@ -16,10 +16,11 @@ layout: page
     <div class="main-content">
         {% include main-navigation.html %}
         {{ content }}
+        <div id="Endnote">{% include svg.html id="logotype" viewbox="110 80" %}</div>
     </div>
 
     <a href="#Top" class="scrollTop">
-        <i class="fa fa-angle-up"></i>
+        {% include svg.html id="triangle" viewbox="30 20"%}
     </a>
 
     <script src="{{ site.baseurl }}/assets/js/global.js"></script>

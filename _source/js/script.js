@@ -13,6 +13,7 @@ $(document).ready(function() {
     $('.docs-navigation a[href^="#"]').scrollToID();
     $('.scrollTop').scrollToID();
     menuToggle();
+    menuDropdown();
 
 
     /* ------------------------------

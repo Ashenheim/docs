@@ -81,13 +81,43 @@
         ------------ */
 
     &-list {
+        @include bp-medium {
+            display: none;
+        }
         &__title {
+            @extend .noselect;
             @include padding( $spacing-small null );
             cursor: pointer;
+
+            >.arrow  { display: none; }
+
+            @include bp-medium {
+                >.arrow {
+                    display: inline-block;
+                    height: 8px;
+
+                    svg {
+                        display: block;
+                        width: 9px;
+                        height: 6px;
+                        fill: currentcolor;
+                        transition: transform $easing-fast;
+                    }
+                }
+            }
+
             &:hover {
                 background: $white;
             }
         }
         &__container {}
+
+        // States
+        &__container.is-active & {
+            display: block;
+            &__title > .arrow svg {
+                transform: rotate(180deg);
+            }
+        }
     }
 }

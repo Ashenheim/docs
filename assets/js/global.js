@@ -37199,6 +37199,23 @@ App.controller('search', ["$scope", "$http", function($scope, $http) {
 }]);
 $(function ($) {
 
+    menuDropdown = function() {
+        var $container = $(".docs-list__container")
+
+        $container.each(function() {
+            var $self = $(this),
+                $trigger = $(this).children(".docs-list__title");
+
+            $trigger.on('click', function (event) {
+                $self.toggleClass('is-active');
+            });
+        });
+    }
+
+}(jQuery));
+
+$(function ($) {
+
     menuToggle = function() {
         var trigger = $('.docs-navigation-trigger'),
             element = $('.site-title'),
@@ -37267,6 +37284,7 @@ $(document).ready(function() {
     $('.docs-navigation a[href^="#"]').scrollToID();
     $('.scrollTop').scrollToID();
     menuToggle();
+    menuDropdown();
 
 
     /* ------------------------------

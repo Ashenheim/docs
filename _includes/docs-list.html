@@ -1,5 +1,8 @@
 <section class="docs-list__container {{include.category}}">
-    <h6 class="docs-list__title">{{ include.category | capitalize }}</h6>
+    <h6 class="docs-list__title">
+        {{ include.category | capitalize }}
+        <span class="arrow">{% include svg.html id="triangle" %}</span>
+    </h6>
     <ul class="docs-list">
     {% for node in site.docs %}
     {% if node.category == include.category %}

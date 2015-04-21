@@ -30,15 +30,9 @@
         }
     }
 
-    hr {
-        border-color: rgba( $white, .2 );
-    }
-
+    hr { border-color: rgba( $white, .2 ); }
     ul { margin: 0; padding: 0; margin-bottom: $spacing-medium; list-style-type: none; }
-
-    li {
-        margin: 0;
-
+    li { margin: 0;
         a { @include padding( 10px null ); }
     }
 
@@ -68,33 +62,28 @@
 
 .scrollTop {
     @include position( fixed, null 0 0 null );
+    @include padding( $gutter );
     line-height: 1em;
     display: inline-block;
-    color: $white;
+    color: $c-accent--l;
     background: $c-accent;
     text-align: center;
     font-size: 3em;
-    width: 80px;
-    height: 50px;
+    transition: all $easing;
 
-    i { position: relative; z-index: 1; }
-
-    &:after {
-        @include position( absolute, 0 );
-        @include radial-gradient( circle at 0% 0%, $c-main, $c-sec );
-        content: '';
-        opacity: 0;
-        transition: all $easing-fast;
+    svg {
+        display: block;
+        width: 30px;
+        position: relative;
+        z-index: 1;
+        fill: currentcolor;
+        transition: all $easing;
+        transform: rotate(180deg);
     }
 
     &:hover, &:active, &:focus {
         color: $white;
         background: $c-accent--d;
-
-        &:after {
-            opacity: 1;
-            box-shadow: 0 0 3px rgba( $black, .4 );
-        }
     }
 }
 
@@ -120,4 +109,10 @@
             display: inline-block;
         }
     }
+}
+
+#Endnote {
+    max-width: (110px * 5);
+    margin: 0 auto;
+    fill: $c-accent;
 }
