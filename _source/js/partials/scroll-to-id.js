@@ -2,27 +2,29 @@ $(function ($) {
 
     var target = null;
 
-    scrollToID = function (param) {
+    $.fn.scrollToID = function (param) {
 
+        $(this).each(function(param) {
 
-        $('.docs-navigation a[href^="#"]').on('click', function (event) {
+            $(this).on('click', function (event) {
 
-            event.preventDefault();
+                event.preventDefault();
+                
+                target = $( $(this).attr('href') );
 
-            target = $( $(this).attr('href') );
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 50
+                }, 500);
 
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 50
-            }, 500);
+                target
+                    .addClass('focus')
+                    .on('transitionend webkitTransitionEnd mozTransitionEnd webkitTransitionEnd oTransitionEnd', function() {
+                        target.removeClass('focus');
+                    });
 
-            target
-                .addClass('focus')
-                .on('transitionend webkitTransitionEnd mozTransitionEnd webkitTransitionEnd oTransitionEnd', function() {
-                    target.removeClass('focus');
-                });
+            });
 
         });
-
     };
 
 }(jQuery));

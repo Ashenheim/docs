@@ -10,7 +10,8 @@ $(document).ready(function() {
         Initiations
     ------------------------------ */
 
-    scrollToID();
+    $('.docs-navigation a[href^="#"]').scrollToID();
+    $('.scrollTop').scrollToID();
     menuToggle();
 
 

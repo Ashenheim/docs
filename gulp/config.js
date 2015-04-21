@@ -102,6 +102,22 @@ module.exports = {
     },
 
     /* ------------------------------
+        Media
+    ------------------------------ */
+    Media: {
+        images: {
+            src: paths.media + "*.{jpg,gif,png,svg}"
+        },
+        svg: {
+            src: paths.media + "*.svg"
+        },
+        dest: [
+            paths.dest + paths.assets + "media/",
+            paths.assets + "media/"
+        ]
+    },
+
+    /* ------------------------------
         Fonts copy
     ------------------------------ */
     fonts: {

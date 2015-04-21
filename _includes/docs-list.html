@@ -1,6 +1,6 @@
-<section class="docs__list {{include.category}}">
-    <h6>{{ include.category | capitalize }}</h6>
-    <ul>
+<section class="docs-list__container {{include.category}}">
+    <h6 class="docs-list__title">{{ include.category | capitalize }}</h6>
+    <ul class="docs-list">
     {% for node in site.docs %}
     {% if node.category == include.category %}
         <li>

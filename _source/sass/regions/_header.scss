@@ -22,5 +22,12 @@
                 background: $white;
             }
         }
+
+        svg {
+            fill: currentcolor;
+            width: 110px;
+            height: 80px;
+            display: block;
+        }
     }
 }

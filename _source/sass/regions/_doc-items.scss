@@ -31,6 +31,9 @@
         }
     }
 
+    /*
+        Item styling
+        ------------ */
 
     &-item {
         @extend %clearfix;
@@ -41,15 +44,13 @@
         background: $c-accent--l;
         margin: 0 auto $spacing-large;
         transition: all 500ms ease-in-out;
-    position: relative;
-    z-index: 2;
-
+        position: relative;
+        z-index: 2;
 
         &.focus {
             border-color: $c-notify;
             background: mix($c-notify, $white, 20%);
         }
-
 
         &__header {
             @include padding( $spacing-medium null );
@@ -72,5 +73,21 @@
             @include margin( null 5% );
             width: 90%;
         }
+    }
+
+
+    /*
+        Item styling
+        ------------ */
+
+    &-list {
+        &__title {
+            @include padding( $spacing-small null );
+            cursor: pointer;
+            &:hover {
+                background: $white;
+            }
+        }
+        &__container {}
     }
 }

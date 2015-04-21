@@ -23,20 +23,20 @@ var gulp         = require('gulp'),
 ------------------------------------ */
 
 // gulp build
-gulp.task('build', function(callback) {
+gulp.task('build', function() {
     runSequence(
         'clear',
         'jekyll-build',
-        [ 'scripts', 'styles', 'fonts' ]
+        [ 'scripts', 'styles', 'fonts', "media" ]
     )
 });
 
 // gulp server
-gulp.task('server', function(callback) {
+gulp.task('server', function() {
     runSequence(
         'clear',
         'jekyll-dev',
-        [ 'scripts', 'styles', 'fonts' ],
+        [ 'scripts', 'styles', 'fonts', "media" ],
         ['browserSync', 'watch']
     )
 });
