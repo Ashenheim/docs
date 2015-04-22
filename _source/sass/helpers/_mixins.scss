@@ -45,12 +45,9 @@
 
 
 
-
-
 /*
 	Mixins and functions
 	------------------------------------ */
-
 
 @function calcRem($size) {
 	$remSize: $size / 16px;
@@ -62,19 +59,9 @@
 	font-size: calcRem($size);
 }
 
-
-// Add all states for Hover
-@mixin hover {
-	&:hover, &:active, &:focus {
-		@content;
-	}
-}
-
-
 @mixin cf {
 	@extend %clearfix;
 }
-
 
 @mixin edit($color: black, $important: false) {
 	@if $important {

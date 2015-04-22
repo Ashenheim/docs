@@ -31,7 +31,7 @@
     }
 
     hr { border-color: rgba( $white, .2 ); }
-    ul { margin: 0; padding: 0; margin-bottom: $spacing-medium; list-style-type: none; }
+    ul { @extend .list-unstyled; }
     li { margin: 0;
         a { @include padding( 10px null ); }
     }
@@ -114,5 +114,6 @@
 #Endnote {
     max-width: (110px * 5);
     margin: 0 auto;
+    padding: $spacing-large 0;
     fill: $c-accent;
 }

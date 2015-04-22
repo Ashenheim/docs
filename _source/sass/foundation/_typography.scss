@@ -42,7 +42,7 @@ h6, .zeta {
 	------------------------------------ */
 
 p {
-	margin-bottom: $spacing-large;
+	@include margin( $spacing-medium null );
 	line-height: 1.5em;
 }
 
@@ -50,7 +50,7 @@ a {
 	color: $c-link;
 	font-weight: 700;
 	text-decoration: none;
-	@include hover {
+	&:hover {
 		color: $c-link--hover;
 	}
 }

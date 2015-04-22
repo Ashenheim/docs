@@ -37248,7 +37248,10 @@ $(function ($) {
             $(this).on('click', function (event) {
 
                 event.preventDefault();
-                
+
+                // Force hide Navigation
+                $('html').removeClass('is-fixed navigation-is-active');
+
                 target = $( $(this).attr('href') );
 
                 $('html, body').stop().animate({

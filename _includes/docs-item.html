@@ -1,33 +1,21 @@
 {% for node in site.docs %}
 {% if node.category == include.category %}
 <article class="docs-item" id="{{node.title | replace: " ", "-" | downcase }}" class="{{node.title | replace: " ", "-" | downcase }}">
+    <div class="docs-item__container">
 
-    {% if node.sass %}
-    <style>
-    {% capture include_sccsify %}
-        $parentID: "{{node.title | replace: " ", "-" | downcase }}";
-        $red: red;
-        ##{$parentID} {
-            {{node.sass}}
-        }
-    {% endcapture %}
-    {{ include_sccsify | scssify }}
-    </style>
-    {% endif %}
+        <header class="docs-item__header">
+            <h3>
+                {{node.title}}
+                <a href="#{{site.baseurl}}{{node.title | replace: " ", "-" | downcase }}">
+                    <span class="link"><i class="fa fa-link"></i></span>
+                </a>
+            </h3>
+        </header>
 
-    <header class="docs-item__header">
+        <div class="docs-item__content">
+            {{node.content}}
+        </div>
 
-        <h3>
-            {{node.title}}
-            <a href="#{{site.baseurl}}{{node.title | replace: " ", "-" | downcase }}">
-                <span class="link"><i class="fa fa-link"></i></span>
-            </a>
-        </h3>
-
-    </header>
-
-    <div class="docs-item__content">
-        {{node.content}}
     </div>
 
 </article>

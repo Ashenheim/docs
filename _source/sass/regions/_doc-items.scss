@@ -68,8 +68,7 @@
             &:hover .link { opacity: 1; }
         }
 
-        &__header,
-        &__content {
+        &__container {
             @include margin( null 5% );
             width: 90%;
         }
@@ -81,12 +80,15 @@
         ------------ */
 
     &-list {
+
         @include bp-medium {
             display: none;
         }
+
         &__title {
             @extend .noselect;
-            @include padding( $spacing-small null );
+            @include padding( $gutter null );
+            margin-bottom: 0;
             cursor: pointer;
 
             >.arrow  { display: none; }
@@ -95,6 +97,7 @@
                 >.arrow {
                     display: inline-block;
                     height: 8px;
+                    padding-right: $spacing-small;
 
                     svg {
                         display: block;
@@ -108,9 +111,12 @@
 
             &:hover {
                 background: $white;
+                color: $c-main;
             }
         }
-        &__container {}
+        &__container {
+            border-bottom: 1px solid rgba( black, .1 );
+        }
 
         // States
         &__container.is-active & {
