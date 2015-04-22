@@ -1,12 +1,13 @@
 /*  ====================================
     Spinner styling
     ====================================
-$loadercolor: #000
-$loaderspeed : 3s
+$loadercolor: $c-accent--d
+$loaderspeed: 1s
+$loaderammount: 3
 
 
 .loader
-    +size(100px)
+    +size(60px)
     position: relative
     display: block
     margin: 50px auto
@@ -16,17 +17,21 @@ $loaderspeed : 3s
         +size(100%)
         +position( absolute, 0 null null 0 )
         display: block
-        background: rgba( $loadercolor, .2 )
+        background: $loadercolor
         animation: loader $loaderspeed infinite linear
+        border-radius: 50%
 
         &:nth-child(2)
-            animation-delay: $loaderspeed / 2
+            animation-delay: ($loaderspeed / 3) * 1
+
+        &:nth-child(3)
+            animation-delay: ($loaderspeed / 3) * 2
 
 @keyframes loader
     0%
         transform: scale(1)
         opacity: 0
-    1%
+    10%
         opacity: 1
     100%
         transform: scale(2)
